@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeoPulse | نقشه زنده جهان</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="background-blur blur-1"></div>
+<div class="background-blur blur-2"></div>
+
+<header class="topbar glass">
+    <div class="logo">
+        🌍 GeoPulse
+    </div>
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="countrySearch"
+            placeholder="نام کشور را جستجو کنید..."
+        >
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="map-section glass">
+        <div id="map"></div>
+    </section>
+
+    <aside class="info-panel glass">
+
+        <div class="country-header">
+
+            <img
+                id="flag"
+                src="https://flagcdn.com/w320/us.png"
+                alt="Flag"
+            >
+
+            <div>
+                <h2 id="countryName">انتخاب کشور</h2>
+                <p id="capital">پایتخت: -</p>
+            </div>
+
+        </div>
+
+        <div class="stats">
+
+            <div class="stat-card">
+                <span>🕒 ساعت محلی</span>
+                <strong id="localTime">--:--:--</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>🌡 دما</span>
+                <strong id="temperature">--°C</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>👥 جمعیت</span>
+                <strong id="population">-</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>💰 واحد پول</span>
+                <strong id="currency">-</strong>
+            </div>
+
+        </div>
+
+        <div class="weather-box">
+            <h3>وضعیت آب‌وهوا</h3>
+            <div id="weatherDesc">
+                برای مشاهده اطلاعات روی یک کشور کلیک کنید.
+            </div>
+        </div>
+
+        <div class="country-details">
+
+            <h3>اطلاعات بیشتر</h3>
+
+            <ul>
+                <li>
+                    <span>🌎 قاره:</span>
+                    <strong id="continent">-</strong>
+                </li>
+
+                <li>
+                    <span>🗣 زبان:</span>
+                    <strong id="language">-</strong>
+                </li>
+
+                <li>
+                    <span>📍 مختصات:</span>
+                    <strong id="coords">-</strong>
+                </li>
+            </ul>
+
+        </div>
+
+    </aside>
+
+</main>
+
+<footer class="glass footer">
+    <p>
+        GeoPulse © 2026 | Live World Explorer
+    </p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
